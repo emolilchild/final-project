@@ -8,4 +8,4 @@ def main_menu():
     seating_plan = SeatingPlan()
     seat_availability = SeatAvailability(seating_plan)
     seat_booking = SeatBooking(seating_plan)
-    
+    free_seat = FreeSeat(seating_plan)
