@@ -36,7 +36,6 @@ def main_menu():
                 print("Seat available!")
             else:
                 print("Seat not available.")
-
         elif choice == '2':
             #ask the user for the seat they want to book
             seat = input("Enter seat number to book (e.g., 1A): ")
@@ -44,7 +43,6 @@ def main_menu():
             result = seat_booking.book_seat(seat)
             #print if the action has been completed
             print(result)
-
         elif choice == '3':
             #ask the user to type in the seat they want to cancel
             seat = input("Enter seat number to free (e.g., 1A): ")
@@ -52,11 +50,9 @@ def main_menu():
             result = free_seat.cancel(seat)
             #print if the action has been completed
             print(result)
-
         elif choice == '4':
             #show the seating plane and layout of the plane
             seating_plan.display()
-
         elif choice == '5':
             #use the exit_program object to end the program
             if exit_program.exit_program() == 'exit':
