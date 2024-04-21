@@ -13,7 +13,7 @@ def main_menu():
     #setup instance for the booking of seats
     seat_booking = SeatBooking(seating_plan, seat_availability)
     #setup the instance for the cancelation of seats
-    free_seat = FreeSeat(seating_plan, seat_booking.customer_data, seat_booking.booking_references)
+    free_seat = FreeSeat(seating_plan, seat_booking, seat_booking)
     #set up the termination of the program
     exit_program = ExitProgram()
     #start a loop that will always show the menu after actions are completed
@@ -45,9 +45,9 @@ def main_menu():
             print(result)
         elif choice == '3':
             #ask the user to type in the seat they want to cancel
-            seat = input("Enter seat number to free (e.g., 1A): ")
+            booking_reference = input("Enter booking reference to free a seat: ")
             #use the free_seat object to free up the seat
-            result = free_seat.cancel(seat)
+            result = free_seat.cancel(booking_reference)
             #print if the action has been completed
             print(result)
         elif choice == '4':
