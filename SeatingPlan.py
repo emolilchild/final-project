@@ -13,4 +13,11 @@ class SeatingPlan:
                     #mark the bookable seats as "F"
                     #the keys of the dictionary will be tuples consisting of rows and columns respectively
                     self.seats[(row, col)] = "F"
-    
+        #get the booking status of a specific seat
+        def get_seat_status(self, seat):
+            #identify which row the seat selected is in
+            #slice the string so that we only get the number in front (row number) and not column
+            row = int(seat[:-1])
+            #identidy which column the seat selected is in by applying the same concept
+            col = seat[-1]
+            return self.seats.get((row,col))
