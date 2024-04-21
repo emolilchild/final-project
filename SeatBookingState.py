@@ -2,7 +2,9 @@ class SeatingPlan:
     def __init__(self):
         #create a dictionary that contains and represents the layout and seats of the plane
         self.seats = {}
+        #define the number of rows there are in the plane layout
         self.rows = 80
+        #define the columns in each row where "X" will represent the aisle between row C and D
         self.column = ["A", "B", "C", "X", "D", "E", "F"]
         #iterate over the number of rows in the airplane
         for row in range(1, self.rows+1):
@@ -25,7 +27,7 @@ class SeatingPlan:
         for row in range(1, self.rows +1):
             row_display = f"Row {row}"
             for col in self.column:
-                #get the seat status
+                #get the seat status from the dictionary
                 seat_status = self.seats.get((row, col), "")
                 row_display += f"{seat_status}"
             print(row_display)

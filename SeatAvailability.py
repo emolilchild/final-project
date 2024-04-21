@@ -9,7 +9,9 @@ class SeatAvailability:
         #get column using negative indexing
         col = seat[-1]
         #get the status of the seat
+        #value will be returned only if the key exist
         seat_status = self.seating_plan.seats.get((row, col))
+        #return if the status of the seat is free or not
         if seat_status == "F":
             return True
         else:

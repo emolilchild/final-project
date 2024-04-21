@@ -9,6 +9,7 @@ class FreeSeat:
         if self.seating_plan.seats.get((row, col)) == 'R':
             #change the reserved seat to become free and available again
             self.seating_plan.seats[(row, col)] = 'F'
+            #return that the action has been completed
             return f'Seat {seat} is now free.'
         else:
             return 'Seat is already free or does not exist.'
