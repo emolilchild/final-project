@@ -14,4 +14,3 @@ class SeatAvailability:
             return True
         else:
             return False
-        
