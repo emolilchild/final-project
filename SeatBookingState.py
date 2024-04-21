@@ -11,7 +11,7 @@ class SeatingPlan:
             #for each row iterate over each column in the airplane
             for col in self.column:
                 #mark the bookable seats as "F"
-                #the keys of the dictionary will be tuples consisting of rows and columns respectively
+                #the keys of the dictionary will be tuples consisting of roSws and columns respectively
                 self.seats[(row, col)] = "F"
             #mark the aisle with "X"
             for row in range(1, self.rows+1):

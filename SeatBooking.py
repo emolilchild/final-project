@@ -1,6 +1,4 @@
 import random
-
-
 class SeatBooking:
     # allow the customer to book a seat
     def __init__(self, seating_plan, seat_availability):

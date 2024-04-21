@@ -17,7 +17,7 @@ class FreeSeat:
             #self.seating_plan.seats[(row, col)] = 'F'
         #part b of the project
         #check if the provided booking reference is valid
-        if booking_reference in self.customer_data:
+        if booking_reference in self.booking_reference:
             #find the seat that matches the booking reference
             seat_to_free = None
             #iterate over each seat in the seating plan
@@ -34,8 +34,10 @@ class FreeSeat:
             if seat_to_free:
                 #mark the seat as free "F"
                 self.seating_plan.seats[seat_to_free] = "F"
-                #remove customer data
-                del self.customer_data[booking_reference]
+                #check if the booking reference in the data
+                if booking_reference in self.customer_data:
+                    #remove customer data
+                    del self.customer_data[booking_reference]
                 #remove the booking reference
                 self.booking_reference.discard(booking_reference)
                 # return that the action has been completed
