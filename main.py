@@ -13,7 +13,7 @@ def main_menu():
     #setup instance for the booking of seats
     seat_booking = SeatBooking(seating_plan, seat_availability)
     #setup the instance for the cancelation of seats
-    free_seat = FreeSeat(seating_plan)
+    free_seat = FreeSeat(seating_plan, seat_booking.customer_data, seat_booking.booking_references)
     #set up the termination of the program
     exit_program = ExitProgram()
     #start a loop that will always show the menu after actions are completed
